@@ -1,0 +1,59 @@
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+  margin: 0;
+}
+
+body {
+  /* 3. Add accessible line-height */
+  line-height: 1.5;
+  /* 4. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
+}
+
+/* 5. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* 6. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* 8. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+
+#root,
+#__next {
+  isolation: isolate;
+}
+ a {
+  text-decoration: none;
+  color: inherit;
+ }
+ li {
+  list-style-type: none;
+ }
+ ul {
+  margin: 0;
+  padding: 0;
+ }
