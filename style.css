@@ -1,0 +1,100 @@
+:root {
+  --BrightBlue: hsl(220, 98%, 61%);
+  --CheckBackground: linear-gradient hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+
+  /* ### Light Theme */
+
+  --VeryLightGray: hsl(0, 0%, 98%);
+  --VeryLightGrayishBlue: hsl(236, 33%, 92%);
+  --LightGrayishBlue: hsl(233, 11%, 84%);
+  --DarkGrayishBlue: hsl(236, 9%, 61%);
+  --VeryDarkGrayishBlue: hsl(235, 19%, 35%);
+
+  /* ### Dark Theme */
+
+  --VeryDarkBlue: hsl(235, 21%, 11%);
+  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+  --LightGrayishBlue: hsl(234, 39%, 85%);
+  --LightGrayishBlueHover: hsl(236, 33%, 92%);
+  --DarkGrayishBlue: hsl(234, 11%, 52%);
+  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
+  --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+}
+
+.josefin-sans-400 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.josefin-sans-700 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tasksContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 540px;
+  min-height: 440px;
+  width: 100%;
+  height: 100%;
+}
+
+
+.tasksList {
+  list-style: none;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  background: #b5b5b7;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+  cursor: grab;
+  user-select: none;
+}
+
+.task:active {
+  cursor: grabbing;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.task[aria-checked='true'] .task-text {
+    text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.drag-over {
+  outline: 2px dashed #999;
+}
+
+.task.hidden {
+  display: none;
+}
+
+    .menu {
+      display: flex;
+    }
