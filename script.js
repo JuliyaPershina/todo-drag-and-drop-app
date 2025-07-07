@@ -241,5 +241,23 @@ clearCompletedBtn.addEventListener('click', () => {
   saveTasks();
 });
 
+// Перемикач теми
+
+const toggleBtn = document.getElementById('themeToggle');
+
+toggleBtn.addEventListener('click', () => {
+  const current = document.documentElement.getAttribute('data-theme');
+  const newTheme = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', newTheme);
+  localStorage.setItem('theme', newTheme); // зберігаємо
+});
+
+// Автоматичне застосування теми з localStorage при завантаженні
+
+document.addEventListener('DOMContentLoaded', () => {
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', savedTheme);
+});
+
 // ---------- Ініціалізація ----------
 loadTasks();

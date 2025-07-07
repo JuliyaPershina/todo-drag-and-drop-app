@@ -18,20 +18,18 @@
   --LightGrayishBlue: #e4e5f1;
   --DarkGrayishBlue: #9394a5;
 
-  /* ### Dark Theme */
-
-  --BodyDarDg: url(./images/bg-desktop-dark.jpg) no-repeat var(--VeryDarkBlue);
-
   --VeryDarkBlue: #25273c;
-  --DarkThemShadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
 
-  --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
-  --LightGrayishBlue: hsl(234, 39%, 85%);
-  --LightGrayishBlueHover: hsl(236, 33%, 92%);
-  --DarkGrayishBlue: hsl(234, 11%, 52%);
-  --VeryDarkGrayishBlue: hsl(233, 14%, 35%);
-  --VeryDarkGrayishBlue2: hsl(237, 14%, 26%);
 }
+
+[data-theme="dark"] {
+    --bg-color: url(./images/bg-desktop-dark.jpg) no-repeat var(--VeryDarkBlue);
+    --text-color: #C8CBE7;
+    --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+    --text-color-light: #5B5E7E;
+    --text-color-unactive: #4D5067;
+    --border: #979797;
+  }
 
 .josefin-sans-400 {
   font-family: 'Josefin Sans', sans-serif;
