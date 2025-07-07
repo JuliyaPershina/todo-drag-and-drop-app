@@ -19,17 +19,25 @@
     <div class="wrapper">
       <header>
         <h1 class="josefin-sans-700">Todo</h1>
-        <button id="themeToggle"><img src="./images/icon-moon.svg" alt=""></button>
+        <button id="themeToggle">
+          <img src="./images/icon-moon.svg" alt="" />
+        </button>
       </header>
 
       <main>
-        <div class="createContainer"><input type="text" placeholder="Create a new todo…" id="newTaskInput" /></div>
+        <div class="createContainer">
+          <input
+            type="text"
+            placeholder="Create a new todo…"
+            id="newTaskInput"
+          />
+        </div>
         <div class="tasksContainer">
           <ul class="tasksList" id="tasksList"></ul>
-      
+
           <div class="menu">
             <p id="countLeft">0 items left</p>
-            
+
             <div class="filtres">
               <button type="button" data-filter="all">All</button>
               <button type="button" data-filter="active">Active</button>

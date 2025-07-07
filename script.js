@@ -27,54 +27,6 @@ function loadTasks() {
   updateCount();
 }
 
-// ---------- Створення задач ----------
-// function createTaskElement(text, id) {
-//   const li = document.createElement('li');
-//   li.className = 'task';
-//   li.setAttribute('role', 'checkbox');
-//   li.setAttribute('aria-checked', 'false');
-//   li.setAttribute('tabindex', '0');
-//   li.setAttribute('draggable', 'true');
-//   li.id = id;
-
-//   const checkbox = document.createElement('input');
-//   checkbox.type = 'checkbox';
-//   checkbox.className = 'checkbox';
-
-//   const span = document.createElement('span');
-//   span.className = 'task-text';
-//     span.textContent = text;
-    
-//     const btn = document.createElement('button');
-//     btn.className = 'task-btn';
-//     btn.textContent = "Видалити";
-
-    
-
-//   li.append(checkbox, span, btn);
-
-//   checkbox.addEventListener('change', () => {
-//     li.setAttribute('aria-checked', checkbox.checked ? 'true' : 'false');
-//     updateCount();
-//     saveTasks();
-//     applyFilter();
-//   });
-
-//   li.addEventListener('keydown', (e) => {
-//     if (e.key === ' ' || e.key === 'Enter') {
-//       e.preventDefault();
-//       checkbox.checked = !checkbox.checked;
-//       checkbox.dispatchEvent(new Event('change'));
-//     }
-//   });
-//   btn.addEventListener('click', () => {
-//     li.remove();
-//     updateCount(); // (опціонально) оновлення лічильника
-//     saveTasks(); // (опціонально) збереження після видалення
-//   });
-//   return li;
-// }
-
 function createTaskElement(text, id) {
   const li = document.createElement('li');
   li.className = 'task';
@@ -134,9 +86,6 @@ function createTaskElement(text, id) {
 
   return li;
 }
-  
-  
-  
 
 // ---------- Додавання нової задачі ----------
 newTaskInput.addEventListener('keydown', (e) => {
@@ -270,7 +219,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.documentElement.setAttribute('data-theme', savedTheme);
   updateThemeIcon(savedTheme);
 });
-
 
 // ---------- Ініціалізація ----------
 loadTasks();

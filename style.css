@@ -11,7 +11,7 @@
   --text-color: hsl(235, 19%, 35%);
   --text-color-light: #9495a5;
   --text-color-unactive: #d1d2da;
-  --text-color-plaseholder: #9495A5;
+  --text-color-plaseholder: #9495a5;
   --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.5);
   --border: #e3e4f1;
   --tasksColor: var(--white);
@@ -30,8 +30,8 @@
   --text-color-light: #5b5e7e;
   --text-color-unactive: #4d5067;
   --text-color-plaseholder: #767992;
-  --border: #393A4B;
-  --tasksColor: #25273D;
+  --border: #393a4b;
+  --tasksColor: #25273d;
 }
 
 .josefin-sans-400 {
@@ -269,6 +269,9 @@ main {
     border: none;
     background: none;
   }
+  button:hover {
+    color: var(--BrightBlue);
+  }
   .filtres {
     display: flex;
   }
@@ -277,7 +280,6 @@ main {
 footer {
   margin-inline: auto;
   height: 14px;
-  /* margin-block-start: 50px; */
   flex-shrink: 0;
 }
 
@@ -298,8 +300,6 @@ footer {
     height: 368px;
   }
 
-  .menu {
-  }
   .filtres {
     position: absolute;
     left: 0;
@@ -308,7 +308,7 @@ footer {
     height: 48px;
     justify-content: center;
     gap: 6px;
-    background: var(--white);
+    background: var(--tasksColor);
     box-shadow: var(--box-shadow);
     border-radius: 5px;
   }
