@@ -244,20 +244,33 @@ clearCompletedBtn.addEventListener('click', () => {
 // Перемикач теми
 
 const toggleBtn = document.getElementById('themeToggle');
+const toggleIcon = toggleBtn.querySelector('img');
+
+function updateThemeIcon(theme) {
+  if (theme === 'dark') {
+    toggleIcon.src = './images/icon-sun.svg';
+    toggleIcon.alt = 'Light mode';
+  } else {
+    toggleIcon.src = './images/icon-moon.svg';
+    toggleIcon.alt = 'Dark mode';
+  }
+}
 
 toggleBtn.addEventListener('click', () => {
   const current = document.documentElement.getAttribute('data-theme');
   const newTheme = current === 'dark' ? 'light' : 'dark';
   document.documentElement.setAttribute('data-theme', newTheme);
-  localStorage.setItem('theme', newTheme); // зберігаємо
+  localStorage.setItem('theme', newTheme);
+  updateThemeIcon(newTheme);
 });
 
-// Автоматичне застосування теми з localStorage при завантаженні
-
+// При завантаженні сторінки
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme') || 'light';
   document.documentElement.setAttribute('data-theme', savedTheme);
+  updateThemeIcon(savedTheme);
 });
+
 
 // ---------- Ініціалізація ----------
 loadTasks();

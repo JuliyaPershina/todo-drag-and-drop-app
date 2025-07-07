@@ -19,17 +19,16 @@
   --DarkGrayishBlue: #9394a5;
 
   --VeryDarkBlue: #25273c;
-
 }
 
-[data-theme="dark"] {
-    --bg-color: url(./images/bg-desktop-dark.jpg) no-repeat var(--VeryDarkBlue);
-    --text-color: #C8CBE7;
-    --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
-    --text-color-light: #5B5E7E;
-    --text-color-unactive: #4D5067;
-    --border: #979797;
-  }
+[data-theme='dark'] {
+  --bg-color: url(./images/bg-desktop-dark.jpg) no-repeat var(--VeryDarkBlue);
+  --text-color: #c8cbe7;
+  --box-shadow: 0px 35px 50px -15px rgba(0, 0, 0, 0.5);
+  --text-color-light: #5b5e7e;
+  --text-color-unactive: #4d5067;
+  --border: #979797;
+}
 
 .josefin-sans-400 {
   font-family: 'Josefin Sans', sans-serif;
@@ -61,6 +60,15 @@ body {
   max-width: 540px;
   margin-inline: auto;
   gap: 50px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  button {
+    background: none;
+    border: none;
+  }
 }
 h1 {
   font-size: 40px;
