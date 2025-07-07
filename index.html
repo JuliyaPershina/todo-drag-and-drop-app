@@ -17,16 +17,17 @@
   </head>
   <body class="josefin-sans-400">
     <div class="wrapper">
-      <header><h1>Todo</h1></header>
+      <header><h1 class="josefin-sans-700">Todo</h1></header>
 
       <main>
-        <input type="text" placeholder="Create a new todo…" id="newTaskInput" />
+        <div class="createContainer"><input type="text" placeholder="Create a new todo…" id="newTaskInput" /></div>
         <div class="tasksContainer">
           <ul class="tasksList" id="tasksList"></ul>
       
           <div class="menu">
-            <button type="button" id="countLeft">0 items left</button>
-            <div>
+            <p id="countLeft">0 items left</p>
+            
+            <div class="filtres">
               <button type="button" data-filter="all">All</button>
               <button type="button" data-filter="active">Active</button>
               <button type="button" data-filter="completed">Completed</button>
